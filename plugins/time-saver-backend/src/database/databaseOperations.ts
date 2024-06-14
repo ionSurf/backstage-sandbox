@@ -26,7 +26,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return rows;
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -41,7 +41,7 @@ export class DatabaseOperations {
       this.logger.debug(`Data inserted successfully ${data}`);
       return insertedRow;
     } catch (error) {
-      this.logger.error('Error inserting data:', error);
+      this.logger.error('Error inserting data:', error as Error);
       throw error; // Re-throw the error for handling further up the call stack
     }
   }
@@ -60,7 +60,7 @@ export class DatabaseOperations {
         this.logger.info('Data inserted successfully');
       })
       .catch(error => {
-        this.logger.error('Error inserting data:', error);
+        this.logger.error('Error inserting data:', error as Error);
       });
   }
 
@@ -77,7 +77,7 @@ export class DatabaseOperations {
         this.logger.info('Data updated successfully');
       })
       .catch(error => {
-        this.logger.error('Error updating data:', error);
+        this.logger.error('Error updating data:', error as Error);
       });
   }
 
@@ -93,7 +93,7 @@ export class DatabaseOperations {
         return deletedRow;
       })
       .catch(error => {
-        this.logger.error('Error deleting data:', error);
+        this.logger.error('Error deleting data:', error as Error);
       });
   }
 
@@ -115,7 +115,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -129,7 +129,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -144,7 +144,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -159,7 +159,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -173,7 +173,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -198,7 +198,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -222,7 +222,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -246,7 +246,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -268,7 +268,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -290,7 +290,7 @@ export class DatabaseOperations {
       this.logger.info(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -302,7 +302,7 @@ export class DatabaseOperations {
       this.logger.debug(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -316,7 +316,7 @@ export class DatabaseOperations {
       this.logger.debug(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -327,7 +327,7 @@ export class DatabaseOperations {
       this.logger.debug(`Data selected successfully ${JSON.stringify(rows)}`);
       return roundNumericValues(rows);
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }

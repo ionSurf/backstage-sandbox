@@ -51,7 +51,7 @@ export class ScaffolderClient {
     } catch (error) {
       this.logger.error(
         `Problem retrieving response from url: ${callUrl}`,
-        error,
+        error as Error,
       );
       return [];
     }

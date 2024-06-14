@@ -31,7 +31,7 @@ export class ScaffolderDatabaseOperations {
       this.logger.debug(`Data selected successfully ${JSON.stringify(rows)}`);
       return rows;
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }
@@ -44,7 +44,7 @@ export class ScaffolderDatabaseOperations {
       this.logger.debug(`Data selected successfully `);
       return;
     } catch (error) {
-      this.logger.error('Error selecting data:', error);
+      this.logger.error('Error selecting data:', error as Error);
       throw error;
     }
   }

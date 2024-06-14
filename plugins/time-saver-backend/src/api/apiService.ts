@@ -155,7 +155,7 @@ export class TsApi {
         }
       }
     } catch (error) {
-      this.logger.error(`problem with template backward migration`, error);
+      this.logger.error(`problem with template backward migration`, error as Error);
       return {
         status: 'error',
         error: error as Error,
