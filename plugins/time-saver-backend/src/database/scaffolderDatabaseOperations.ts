@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Knex } from 'knex';
-import { Logger } from 'winston';
+import { LoggerService as Logger } from '@backstage/backend-plugin-api';
 
 export class ScaffolderDatabaseOperations {
   constructor(private readonly knex: Knex, private readonly logger: Logger) {}

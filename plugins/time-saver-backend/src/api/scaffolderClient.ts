@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Config } from '@backstage/config';
-import { Logger } from 'winston';
+import { LoggerService as Logger } from '@backstage/backend-plugin-api';
 import jwt from 'jsonwebtoken';
 import * as base64 from 'base64-js';
 

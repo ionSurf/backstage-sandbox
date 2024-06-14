@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { TaskRunner } from '@backstage/backend-tasks';
-import { Logger } from 'winston';
+import { LoggerService as Logger } from '@backstage/backend-plugin-api';
 import * as uuid from 'uuid';
 import { TimeSaverHandler } from './handler';
 import { Knex } from 'knex';

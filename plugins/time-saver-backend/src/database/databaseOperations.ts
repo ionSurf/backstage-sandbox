@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Knex } from 'knex';
-import { Logger } from 'winston';
+import { LoggerService as Logger } from '@backstage/backend-plugin-api';
 import { roundNumericValues } from '../utils';
 
 export class DatabaseOperations {

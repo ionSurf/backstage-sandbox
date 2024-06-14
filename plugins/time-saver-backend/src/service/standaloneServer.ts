@@ -19,7 +19,7 @@ import {
   loadBackendConfig,
 } from '@backstage/backend-common';
 import { Server } from 'http';
-import { Logger } from 'winston';
+import { LoggerService as Logger } from '@backstage/backend-plugin-api';
 import { createRouter } from './router';
 import { ConfigReader } from '@backstage/config';
 import {
