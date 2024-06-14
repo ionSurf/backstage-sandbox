@@ -9,21 +9,30 @@ import { createRouter } from './service/router';
  *
  * @public
  */
-export const timeSaverBackend = createBackendPlugin({
+export const timeSaverBackendPlugin = createBackendPlugin({
   pluginId: 'time-saver-backend',
   register(env) {
     env.registerInit({
       deps: {
         httpRouter: coreServices.httpRouter,
         logger: coreServices.logger,
+        config: coreServices.rootConfig,
+        database: coreServices.database,
+        scheduler: coreServices.scheduler,
       },
       async init({
         httpRouter,
         logger,
+        config,
+        database,
+        scheduler
       }) {
         httpRouter.use(
           await createRouter({
             logger,
+            config,
+            database,
+            scheduler
           }),
         );
         httpRouter.addAuthPolicy({
