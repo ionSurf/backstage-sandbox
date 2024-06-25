@@ -27,7 +27,8 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "plugins/*"
+      "plugins/*",
+      "../backstage-timesaver-plugin/plugins/*"
     ]
   },
   "devDependencies": {
