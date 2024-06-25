@@ -38,4 +38,7 @@ backend.add(import('@backstage/plugin-search-backend/alpha'));
 backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
 backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 
+// time saver plugin
+backend.add(import('@tduniec/backstage-plugin-time-saver-backend'));
+
 backend.start();
