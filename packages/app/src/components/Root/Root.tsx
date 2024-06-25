@@ -26,6 +26,7 @@ import {
 } from '@backstage/core-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Timelapse from '@material-ui/icons/Timelapse';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -82,6 +83,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         icon={<UserSettingsSignInAvatar />}
         to="/settings"
       >
+        <SidebarItem icon={Timelapse} to="time-saver" text="timeSaver" />
         <SidebarSettings />
       </SidebarGroup>
     </Sidebar>
