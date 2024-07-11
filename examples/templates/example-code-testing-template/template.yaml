@@ -1,74 +1,87 @@
+---
 apiVersion: scaffolder.backstage.io/v1beta3
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
   name: example-code-testing-template
   title: Example Code Testing Template
   description: An example template that tests code
+  substitute:
+    engineering:
+      devops: 1
+      security: 4
+      development_team: 2
 spec:
   owner: user:guest
   type: service
-
-  # These parameters are used to generate the input form in the frontend, and are
-  # used to gather input data for the execution of the template.
   parameters:
-    - title: Fill in some steps
-      required:
-        - name
+    - title: Informations projet
       properties:
         name:
-          title: Name
+          title: Nom du projet
+          description: Nom du projet en language naturel (e.g Fakenames Service)
           type: string
-          description: Unique name of the component
+          default: Hello from Backstage !
           ui:autofocus: true
-          ui:options:
-            rows: 5
-    - title: Choose a location
       required:
-        - repoUrl
-      properties:
-        repoUrl:
-          title: Repository Location
-          type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
-
-  # These steps are executed in the scaffolder backend, using data that we gathered
-  # via the parameters above.
+        - name
   steps:
-    # Each step executes an action, in this case one templates files into the working directory.
-    - id: fetch-base
-      name: Fetch Base
-      action: fetch:template
+    - id: write-debug-line
+      action: debug:log
+      name: ${{ parameters.name }}
       input:
-        url: ./content
-        values:
-          name: ${{ parameters.name }}
-
-    # This step publishes the contents of the working directory to GitHub.
-    - id: publish
-      name: Publish
-      action: publish:github
+        message: ${{ parameters.name }}
+    - id: write-kebab-case
+      name: Rendu kebab-case
+      action: debug:log
       input:
-        allowedHosts: ['github.com']
-        description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}
-
-    # The final step is to register our new component in the catalog.
-    - id: register
-      name: Register
-      action: catalog:register
+        message: Kebab case '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace(" ", "-") }}
+    - id: write-snake-case
+      name: Rendu snake_case
+      action: debug:log
       input:
-        repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
-
-  # Outputs are displayed to the user after a successful execution of the template.
+        message: Snake case '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace(" ", "_") }}
+    - id: write-upper-camel-case
+      name: Rendu UpperCamelCase
+      action: debug:log
+      input:
+        message: Upper camel case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | title | replace (" ", "") }}
+    - id: write-lower-compact-case
+      name: Rendu lowercompactcase
+      action: debug:log
+      input:
+        message: Lower compact case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace (" ", "") }}
+    - id: write-upper-compact-case
+      name: Rendu Uppercompactcase
+      action: debug:log
+      input:
+        message: Upper compact case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | capitalize | replace (" ", "") }}
+    - id: write-bash-variable-case
+      name: Rendu BASH_VARIABLE_CASE
+      action: debug:log
+      input:
+        message: Bash variable case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | upper | replace (" ", "_") }}
   output:
-    links:
-      - title: Repository
-        url: ${{ steps['publish'].output.remoteUrl }}
-      - title: Open in catalog
-        icon: catalog
-        entityRef: ${{ steps['register'].output.entityRef }}
+    text:
+      - title: Résultat du formattage du texte
+        content: >
+          Format | Source | Résultat
+
+          --- | --- | ---
+
+          Kebab case | ${{ parameters.name }} | `${{ parameters.name | lower | replace(" ", "-") }}`
+
+          Snake case | ${{ parameters.name }} | `${{ parameters.name | lower | replace(" ", "_") }}`
+
+          Upper camel case | ${{ parameters.name }} | `${{ parameters.name | title | replace (" ", "") }}`
+
+          Lower compact case | ${{ parameters.name }} | `${{ parameters.name | lower | replace (" ", "") }}`
+
+          Upper compact case | ${{ parameters.name }} | `${{ parameters.name | capitalize | replace (" ", "") }}`
+
+          Rendu bash variable case | ${{ parameters.name }} | `${{ parameters.name | upper | replace (" ", "_") }}`
