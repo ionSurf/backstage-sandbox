@@ -1,0 +1,85 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: example-hello-world-template
+  title: Example Hello World Template
+  description: An example template that outputs the message Hello World
+  substitute:
+    engineering:
+      devops: 1
+      security: 4
+      development_team: 2
+spec:
+  owner: user:guest
+  type: service
+  parameters:
+    - title: Informations utilisateur
+      properties:
+        ownGroup:
+          title: Groupe utilisateur
+          description: Groupes auxquels je suis membre dans le portail.
+          type: string
+          ui:field: MyGroupsPicker
+        ownWorkloadEntity:
+          title: Entité de l'utilisateur
+          description: Entités dont l'utilisateur est propriétaire
+          type: string
+          ui:field: OwnedEntityPicker
+          ui:options:
+            catalogFilter:
+              - kind:
+                  - Component
+                  - Resource
+                  - API
+                metadata.namespace:
+                  exists: true
+        websiteEntity:
+          title: Site Web
+          description: Entité liés à un site Web
+          type: string
+          ui:help: Seules les entités allouée à un espace de nom son listés.
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              - kind:
+                  - Component
+                metadata.namespace:
+                  exists: true
+                spec.type: website
+steps:
+  - id: write-user-displayname
+    name: Nom affiché
+    action: debug:log
+    input:
+      message: ${{ user.entity.spec.profile.displayName | title }}
+  - id: write-user-login
+    name: Identitifant utilisateur
+    action: debug:log
+    input:
+      message: ${{ user.entity.metadata.name | lower }}
+  - id: write-user-email
+    name: Courriel utilisateur
+    action: debug:log
+    input:
+      message: ${{ user.entity.spec.profile.email | lower }}
+  - id: write-user-github
+    name: Identificant Github de l'utilisateur
+    action: debug:log
+    input:
+      message: ${{ user.entity.metadata.annotations.github.com/user-login | title }}
+output:
+  text:
+    - title: Result
+      content: >
+        Format | Source | Résultat
+
+        --- | --- | ---
+
+        MyGroupPiker | Groupe dont l'utilisateur courant est membre | `${{ parameters.ownGroup }}`
+
+        OwnedEntityPicker | Entités que l'utilisateur courant possède | `${{ parameters.ownGroup }}`
+
+        EntityPicker | Entité de charge de travail | `${{ parameters.workloadEntity }}`
+
+        EntityPicker (par type) | Entité de charge de travail de type site Web | `${{ parameters.websiteEntity }}`

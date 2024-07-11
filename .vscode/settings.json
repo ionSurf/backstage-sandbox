@@ -1,0 +1,17 @@
+{
+  "cSpell.words": [
+    "Timelapse"
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Alithya Backstage",
+      "database": "backstage_plugin_time-saver",
+      "username": "backstage_app",
+      "password": "alithya"
+    }
+  ]
+}

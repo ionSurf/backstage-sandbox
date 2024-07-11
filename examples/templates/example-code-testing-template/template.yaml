@@ -1,0 +1,87 @@
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: example-code-testing-template
+  title: Example Code Testing Template
+  description: An example template that tests code
+  substitute:
+    engineering:
+      devops: 1
+      security: 4
+      development_team: 2
+spec:
+  owner: user:guest
+  type: service
+  parameters:
+    - title: Informations projet
+      properties:
+        name:
+          title: Nom du projet
+          description: Nom du projet en language naturel (e.g Fakenames Service)
+          type: string
+          default: Hello from Backstage !
+          ui:autofocus: true
+      required:
+        - name
+  steps:
+    - id: write-debug-line
+      action: debug:log
+      name: ${{ parameters.name }}
+      input:
+        message: ${{ parameters.name }}
+    - id: write-kebab-case
+      name: Rendu kebab-case
+      action: debug:log
+      input:
+        message: Kebab case '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace(" ", "-") }}
+    - id: write-snake-case
+      name: Rendu snake_case
+      action: debug:log
+      input:
+        message: Snake case '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace(" ", "_") }}
+    - id: write-upper-camel-case
+      name: Rendu UpperCamelCase
+      action: debug:log
+      input:
+        message: Upper camel case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | title | replace (" ", "") }}
+    - id: write-lower-compact-case
+      name: Rendu lowercompactcase
+      action: debug:log
+      input:
+        message: Lower compact case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | lower | replace (" ", "") }}
+    - id: write-upper-compact-case
+      name: Rendu Uppercompactcase
+      action: debug:log
+      input:
+        message: Upper compact case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | capitalize | replace (" ", "") }}
+    - id: write-bash-variable-case
+      name: Rendu BASH_VARIABLE_CASE
+      action: debug:log
+      input:
+        message: Bash variable case for '${{ parameters.name }}'
+        extra: ${{ parameters.name | upper | replace (" ", "_") }}
+  output:
+    text:
+      - title: Résultat du formattage du texte
+        content: >
+          Format | Source | Résultat
+
+          --- | --- | ---
+
+          Kebab case | ${{ parameters.name }} | `${{ parameters.name | lower | replace(" ", "-") }}`
+
+          Snake case | ${{ parameters.name }} | `${{ parameters.name | lower | replace(" ", "_") }}`
+
+          Upper camel case | ${{ parameters.name }} | `${{ parameters.name | title | replace (" ", "") }}`
+
+          Lower compact case | ${{ parameters.name }} | `${{ parameters.name | lower | replace (" ", "") }}`
+
+          Upper compact case | ${{ parameters.name }} | `${{ parameters.name | capitalize | replace (" ", "") }}`
+
+          Rendu bash variable case | ${{ parameters.name }} | `${{ parameters.name | upper | replace (" ", "_") }}`
