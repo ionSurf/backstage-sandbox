@@ -3329,6 +3329,9 @@ __metadata:
 "@backstage/eslint-plugin@npm:^0.1.8":
   version: 0.1.8
   resolution: "@backstage/eslint-plugin@npm:0.1.8"
+"@backstage/eslint-plugin@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "@backstage/eslint-plugin@npm:0.1.8"
   dependencies:
     "@manypkg/get-packages": "npm:^1.1.3"
     minimatch: "npm:^9.0.0"
@@ -8994,6 +8997,7 @@ __metadata:
     prop-types: "npm:^15.8.1"
   peerDependencies:
     "@rjsf/utils": ^5.18.x
+    "@rjsf/utils": ^5.18.x
     react: ^16.14.0 || >=17
   checksum: 10c0/5fe90ae1060ab516e5b14e18f8fc09468ba7ade2337960b1dfff0ee5b4af348893ca5a4a5f74a19508d3b27f21828a4f4bcf0e45f210fa093b9546dc8c2eeb2b
   languageName: node
@@ -9005,6 +9009,8 @@ __metadata:
   peerDependencies:
     "@material-ui/core": ^4.12.3
     "@material-ui/icons": ^4.11.2
+    "@rjsf/core": ^5.18.x
+    "@rjsf/utils": ^5.18.x
     "@rjsf/core": ^5.18.x
     "@rjsf/utils": ^5.18.x
     react: ^16.14.0 || >=17
@@ -10107,6 +10113,7 @@ __metadata:
   linkType: hard
 
 "@stoplight/spectral-core@npm:^1.16.1, @stoplight/spectral-core@npm:^1.7.0, @stoplight/spectral-core@npm:^1.8.0":
+"@stoplight/spectral-core@npm:^1.16.1, @stoplight/spectral-core@npm:^1.7.0, @stoplight/spectral-core@npm:^1.8.0":
   version: 1.18.3
   resolution: "@stoplight/spectral-core@npm:1.18.3"
   dependencies:
@@ -10135,6 +10142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stoplight/spectral-formats@npm:^1.0.0":
 "@stoplight/spectral-formats@npm:^1.0.0":
   version: 1.6.0
   resolution: "@stoplight/spectral-formats@npm:1.6.0"
@@ -10192,6 +10200,7 @@ __metadata:
   linkType: hard
 
 "@stoplight/spectral-runtime@npm:^1.0.0, @stoplight/spectral-runtime@npm:^1.1.0, @stoplight/spectral-runtime@npm:^1.1.2":
+"@stoplight/spectral-runtime@npm:^1.0.0, @stoplight/spectral-runtime@npm:^1.1.0, @stoplight/spectral-runtime@npm:^1.1.2":
   version: 1.1.2
   resolution: "@stoplight/spectral-runtime@npm:1.1.2"
   dependencies:
@@ -10217,6 +10226,7 @@ __metadata:
   linkType: hard
 
 "@stoplight/types@npm:^12.3.0 || ^13.0.0, @stoplight/types@npm:^13.12.0, @stoplight/types@npm:^13.6.0":
+"@stoplight/types@npm:^12.3.0 || ^13.0.0, @stoplight/types@npm:^13.12.0, @stoplight/types@npm:^13.6.0":
   version: 13.20.0
   resolution: "@stoplight/types@npm:13.20.0"
   dependencies:
@@ -10226,6 +10236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stoplight/types@npm:^14.1.1":
 "@stoplight/types@npm:^14.1.1":
   version: 14.1.1
   resolution: "@stoplight/types@npm:14.1.1"
@@ -13041,6 +13052,7 @@ __metadata:
   linkType: hard
 
 "ajv@npm:^6.12.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5":
+"ajv@npm:^6.12.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -13290,6 +13302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argparse@npm:^1.0.10, argparse@npm:^1.0.7":
 "argparse@npm:^1.0.10, argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -14631,6 +14644,9 @@ __metadata:
 "chalk@npm:^3.0.0":
   version: 3.0.0
   resolution: "chalk@npm:3.0.0"
+"chalk@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "chalk@npm:3.0.0"
   dependencies:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
@@ -14638,6 +14654,9 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
 "chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
@@ -14837,6 +14856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^7.0.2":
 "cliui@npm:^7.0.2":
   version: 7.0.4
   resolution: "cliui@npm:7.0.4"
@@ -18270,6 +18290,7 @@ __metadata:
   linkType: hard
 
 "fast-json-patch@npm:^3.0.0-1":
+"fast-json-patch@npm:^3.0.0-1":
   version: 3.1.1
   resolution: "fast-json-patch@npm:3.1.1"
   checksum: 10c0/8a0438b4818bb53153275fe5b38033610e8c9d9eb11869e6a7dc05eb92fa70f3caa57015e344eb3ae1e71c7a75ad4cc6bc2dc9e0ff281d6ed8ecd44505210ca8
@@ -18320,6 +18341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-safe-stringify@npm:^2.0.6, fast-safe-stringify@npm:^2.0.7, fast-safe-stringify@npm:^2.1.1":
 "fast-safe-stringify@npm:^2.0.6, fast-safe-stringify@npm:^2.0.7, fast-safe-stringify@npm:^2.1.1":
   version: 2.1.1
   resolution: "fast-safe-stringify@npm:2.1.1"
@@ -18793,6 +18815,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^10.0.0":
 "fs-extra@npm:^10.0.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
@@ -20385,6 +20408,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"inquirer@npm:^8.2.0, inquirer@npm:^8.2.4":
 "inquirer@npm:^8.2.0, inquirer@npm:^8.2.4":
   version: 8.2.6
   resolution: "inquirer@npm:8.2.6"
@@ -22390,7 +22414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knex@npm:3, knex@npm:^3.0.0":
+"knex@npm:3, knex@npm:^3.0.0, knex@npm:^3.1.0":
   version: 3.1.0
   resolution: "knex@npm:3.1.0"
   dependencies:
@@ -22933,6 +22957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash@npm:^4.15.0, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.7.0, lodash@npm:~4.17.21":
 "lodash@npm:^4.15.0, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.7.0, lodash@npm:~4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
@@ -24267,6 +24292,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mkdirp@npm:^0.5.4":
 "mkdirp@npm:^0.5.4":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
@@ -26058,6 +26084,7 @@ __metadata:
   linkType: hard
 
 "path-parse@npm:^1.0.7":
+"path-parse@npm:^1.0.7":
   version: 1.0.7
   resolution: "path-parse@npm:1.0.7"
   checksum: 10c0/11ce261f9d294cc7a58d6a574b7f1b935842355ec66fba3c3fd79e0f036462eaf07d0aa95bb74ff432f9afef97ce1926c720988c6a7451d8a584930ae7de86e1
@@ -26175,6 +26202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pg-connection-string@npm:^2.3.0, pg-connection-string@npm:^2.6.4":
 "pg-connection-string@npm:^2.3.0, pg-connection-string@npm:^2.6.4":
   version: 2.6.4
   resolution: "pg-connection-string@npm:2.6.4"
@@ -28503,6 +28531,7 @@ __metadata:
   linkType: hard
 
 "resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.19.0, resolve@npm:^1.20.0, resolve@npm:^1.22.1, resolve@npm:^1.22.4":
+"resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.19.0, resolve@npm:^1.20.0, resolve@npm:^1.22.1, resolve@npm:^1.22.4":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -28876,6 +28905,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.5.5, rxjs@npm:^7.8.1":
 "rxjs@npm:^7.5.5, rxjs@npm:^7.8.1":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
@@ -30085,6 +30115,7 @@ __metadata:
   linkType: hard
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1, strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1, strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
   version: 6.0.1
   resolution: "strip-ansi@npm:6.0.1"
   dependencies:
@@ -30141,6 +30172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-json-comments@npm:^3.1.1":
 "strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
@@ -30324,6 +30356,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
 "supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
   version: 8.1.1
   resolution: "supports-color@npm:8.1.1"
@@ -30973,6 +31006,7 @@ __metadata:
   linkType: hard
 
 "triple-beam@npm:^1.3.0, triple-beam@npm:^1.4.1":
+"triple-beam@npm:^1.3.0, triple-beam@npm:^1.4.1":
   version: 1.4.1
   resolution: "triple-beam@npm:1.4.1"
   checksum: 10c0/4bf1db71e14fe3ff1c3adbe3c302f1fdb553b74d7591a37323a7badb32dc8e9c290738996cbb64f8b10dc5a3833645b5d8c26221aaaaa12e50d1251c9aba2fea
@@ -31116,6 +31150,13 @@ __metadata:
   version: 2.6.3
   resolution: "tslib@npm:2.6.3"
   checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.5.0, tslib@npm:^2.6.0, tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 
@@ -32177,6 +32218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+"wcwidth@npm:^1.0.0, wcwidth@npm:^1.0.1":
 "wcwidth@npm:^1.0.0, wcwidth@npm:^1.0.1":
   version: 1.0.1
   resolution: "wcwidth@npm:1.0.1"
