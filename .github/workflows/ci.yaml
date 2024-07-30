@@ -28,7 +28,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --immutable
 
       # - name: Check format
       #   id: yarn-format-check
