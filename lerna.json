@@ -1,5 +1,9 @@
 {
-  "packages": ["packages/*", "plugins/*", "../backstage-timesaver-plugin/plugins/*"],
+  "packages": [
+    "packages/*",
+    "plugins/*",
+    "../backstage-timesaver-plugin/plugins/*"
+  ],
   "npmClient": "yarn",
   "version": "0.1.0",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"

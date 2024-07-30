@@ -8,10 +8,21 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "Alithya Backstage",
+      "name": "Backstage Time Saver DB",
       "database": "backstage_plugin_time-saver",
       "username": "backstage_app",
       "password": "alithya"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Backstage Scaffolder DB",
+      "group": "Alithya",
+      "username": "backstage_app",
+      "password": "alithya",
+      "database": "backstage_plugin_scaffolder"
     }
   ]
 }
