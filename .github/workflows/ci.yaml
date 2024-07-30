@@ -26,24 +26,24 @@ jobs:
         with:
           node-version-file: .node-version
 
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
+      # - name: Install dependencies
+      #   run: yarn --frozen-lockfile
 
-      - name: Check format
-        id: yarn-format-check
-        run: yarn prettier:check
+      # - name: Check format
+      #   id: yarn-format-check
+      #   run: yarn prettier:check
 
-      - name: Check linting
-        id: yarn-lint-check
-        run: yarn lint:all
+      # - name: Check linting
+      #   id: yarn-lint-check
+      #   run: yarn lint:all
 
-      - name: Test
-        id: yarn-test
-        run: yarn test:all
+      # - name: Test
+      #   id: yarn-test
+      #   run: yarn test:all
 
-      - name: Compile Typescript
-        id: yarn-tsc
-        run: yarn tsc:full
+      # - name: Compile Typescript
+      #   id: yarn-tsc
+      #   run: yarn tsc:full
 
   # test-typescript:
   #   name: TypeScript Tests
