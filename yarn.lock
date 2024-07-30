@@ -11363,7 +11363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor@workspace:../backstage-timesaver-plugin/plugins/catalog-backend-module-time-saver-processor, @tduniec/backstage-plugin-catalog-backend-module-time-saver-processor@workspace:^":
+"@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor@npm:1.1.0, @tduniec/backstage-plugin-catalog-backend-module-time-saver-processor@workspace:../backstage-timesaver-plugin/plugins/catalog-backend-module-time-saver-processor":
   version: 0.0.0-use.local
   resolution: "@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor@workspace:../backstage-timesaver-plugin/plugins/catalog-backend-module-time-saver-processor"
   dependencies:
@@ -11377,7 +11377,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tduniec/backstage-plugin-time-saver-backend@workspace:../backstage-timesaver-plugin/plugins/time-saver-backend, @tduniec/backstage-plugin-time-saver-backend@workspace:^":
+"@tduniec/backstage-plugin-time-saver-backend@npm:2.4.0, @tduniec/backstage-plugin-time-saver-backend@workspace:../backstage-timesaver-plugin/plugins/time-saver-backend":
   version: 0.0.0-use.local
   resolution: "@tduniec/backstage-plugin-time-saver-backend@workspace:../backstage-timesaver-plugin/plugins/time-saver-backend"
   dependencies:
@@ -11410,7 +11410,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tduniec/backstage-plugin-time-saver-common@workspace:../backstage-timesaver-plugin/plugins/time-saver-common, @tduniec/backstage-plugin-time-saver-common@workspace:^":
+"@tduniec/backstage-plugin-time-saver-common@npm:0.4.0, @tduniec/backstage-plugin-time-saver-common@workspace:../backstage-timesaver-plugin/plugins/time-saver-common":
   version: 0.0.0-use.local
   resolution: "@tduniec/backstage-plugin-time-saver-common@workspace:../backstage-timesaver-plugin/plugins/time-saver-common"
   dependencies:
@@ -11420,7 +11420,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tduniec/backstage-plugin-time-saver@workspace:../backstage-timesaver-plugin/plugins/time-saver, @tduniec/backstage-plugin-time-saver@workspace:^":
+"@tduniec/backstage-plugin-time-saver@npm:1.3.0, @tduniec/backstage-plugin-time-saver@workspace:../backstage-timesaver-plugin/plugins/time-saver":
   version: 0.0.0-use.local
   resolution: "@tduniec/backstage-plugin-time-saver@workspace:../backstage-timesaver-plugin/plugins/time-saver"
   dependencies:
