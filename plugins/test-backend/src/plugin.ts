@@ -17,10 +17,7 @@ export const testPlugin = createBackendPlugin({
         httpRouter: coreServices.httpRouter,
         logger: coreServices.logger,
       },
-      async init({
-        httpRouter,
-        logger,
-      }) {
+      async init({ httpRouter, logger }) {
         httpRouter.use(
           await createRouter({
             logger,
@@ -34,3 +31,5 @@ export const testPlugin = createBackendPlugin({
     });
   },
 });
+
+
