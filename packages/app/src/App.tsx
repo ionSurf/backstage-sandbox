@@ -38,6 +38,8 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { TimeSaverPage } from '@tduniec/backstage-plugin-time-saver';
+import { HomepageCompositionRoot } from '@backstage/plugin-home';
+import { homePage } from './components/home/HomePage';
 import { catalogMessages, catalogReactMessages } from './translations';
 
 const app = createApp({
@@ -70,7 +72,9 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
-    <Route path="/" element={<Navigate to="catalog" />} />
+    <Route path="/" element={<HomepageCompositionRoot />}>
+      {homePage}
+    </Route>
     <Route path="/catalog" element={<CatalogIndexPage />} />
     <Route
       path="/catalog/:namespace/:kind/:name"
