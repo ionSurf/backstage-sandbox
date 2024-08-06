@@ -40,6 +40,10 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 
 // time saver plugin
 backend.add(import('@tduniec/backstage-plugin-time-saver-backend'));
-backend.add(import('@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor'));
+backend.add(
+  import(
+    '@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor'
+  ),
+);
 
 backend.start();
