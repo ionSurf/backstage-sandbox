@@ -1,23 +1,36 @@
 import React from 'react';
-import { Navigate, Route } from 'react-router-dom';
-import { apiDocsPlugin, ApiExplorerPage } from '@backstage/plugin-api-docs';
+import { Route } from 'react-router-dom';
+import {
+  apiDocsPlugin,
+  ApiExplorerPage,
+  // DefaultApiExplorerPageProps,
+} from '@backstage/plugin-api-docs';
 import {
   CatalogEntityPage,
   CatalogIndexPage,
   catalogPlugin,
+  // DefaultCatalogPageProps,
 } from '@backstage/plugin-catalog';
 import {
   CatalogImportPage,
   catalogImportPlugin,
 } from '@backstage/plugin-catalog-import';
-import { ScaffolderPage, scaffolderPlugin } from '@backstage/plugin-scaffolder';
+import {
+  RouterProps,
+  ScaffolderPage,
+  scaffolderPlugin,
+} from '@backstage/plugin-scaffolder';
 import { orgPlugin } from '@backstage/plugin-org';
 import { SearchPage } from '@backstage/plugin-search';
-import { TechRadarPage } from '@backstage-community/plugin-tech-radar';
+import {
+  TechRadarPage,
+  TechRadarPageProps,
+} from '@backstage-community/plugin-tech-radar';
 import {
   TechDocsIndexPage,
   techdocsPlugin,
   TechDocsReaderPage,
+  // TechDocsReaderPageProps,
 } from '@backstage/plugin-techdocs';
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
@@ -70,6 +83,57 @@ const app = createApp({
   },
 });
 
+// const catalogIndexPageRouterOptions: DefaultCatalogPageProps = {
+//   // initiallySelectedFilter: //UserListFilterKind;
+//   // columns: , // TableColumn<CatalogTableRow>[] | CatalogTableColumnsFunc;
+//   // actions: , // TableProps<CatalogTableRow>['actions'];
+//   // initialKind: , // string;
+//   // tableOptions: , // TableProps<CatalogTableRow>['options'];
+//   // emptyContent: , // ReactNode;
+//   // ownerPickerMode: , // EntityOwnerPickerProps['mode'];
+//   // pagination: , // boolean | {
+//   //     limit: number;
+//   // };
+//   // filters: , // ReactNode;
+//   // initiallySelectedNamespaces:  // string[];
+// };
+
+// const techDocsIndexPageRouterOptions: TechDocsReaderPageProps = {
+//   // entityRef: , // CompoundEntityRef;
+//   // children: //TechDocsReaderPageRenderFunction | ReactNode;
+// };
+
+// const TechDocsReaderPageRouterOptions: TechDocsReaderPageProps = {
+//   // entityRef: , // CompoundEntityRef;
+//   // children: //TechDocsReaderPageRenderFunction | ReactNode;
+// };
+
+const scaffolderPageRouteOptions: RouterProps = {
+  headerOptions: {
+    title: 'Software Templates',
+    subtitle: '',
+    pageTitleOverride: 'Software Templates',
+  },
+};
+
+// const apisRouteOptions: DefaultApiExplorerPageProps = {
+//   initiallySelectedFilter: 'all',
+//   // columns: ,
+//   // actions: ,
+//   ownerPickerMode: 'all',
+// };
+
+const TechRadarPageRouterOptions: TechRadarPageProps = {
+  title: 'TechRadar Page',
+  subtitle: '',
+  pageTitle: 'TechRadar',
+  // id: string,
+  width: 0,
+  height: 0,
+  // svgProps: object,
+  // searchText: string,
+};
+
 const routes = (
   <FlatRoutes>
     <Route path="/" element={<HomepageCompositionRoot />}>
@@ -91,11 +155,20 @@ const routes = (
         <ReportIssue />
       </TechDocsAddons>
     </Route>
-    <Route path="/create" element={<ScaffolderPage />} />
+    <Route
+      path="/create"
+      element={<ScaffolderPage {...scaffolderPageRouteOptions} />}
+    />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route
       path="/tech-radar"
-      element={<TechRadarPage width={1500} height={800} />}
+      element={
+        <TechRadarPage
+          {...TechRadarPageRouterOptions}
+          width={1500}
+          height={800}
+        />
+      }
     />
     <Route
       path="/catalog-import"
