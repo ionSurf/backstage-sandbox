@@ -27,8 +27,8 @@ jobs:
           node-version-file: .node-version
           cache: 'yarn'
 
-      - name: Install dependencies
-        run: yarn --immutable
+      # - name: Install dependencies
+      #   run: yarn --immutable
 
       # - name: Check format
       #   id: yarn-format-check
