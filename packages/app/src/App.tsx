@@ -38,8 +38,13 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { TimeSaverPage } from '@tduniec/backstage-plugin-time-saver';
+import { catalogMessages, catalogReactMessages } from './translations';
 
 const app = createApp({
+  __experimentalTranslations: {
+    availableLanguages: ['en', 'fr'],
+    resources: [catalogMessages, catalogReactMessages],
+  },
   apis,
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
