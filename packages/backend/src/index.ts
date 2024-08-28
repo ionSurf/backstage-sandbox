@@ -46,4 +46,11 @@ backend.add(
   ),
 );
 
+// tech-insights
+backend.add(import('@backstage-community/plugin-tech-insights-backend'));
+// backend.add(legacyPlugin('tech-insights', import('./plugins/techInsights')));
+backend.add(
+  import('@backstage-community/plugin-tech-insights-backend-module-jsonfc'),
+);
+
 backend.start();
