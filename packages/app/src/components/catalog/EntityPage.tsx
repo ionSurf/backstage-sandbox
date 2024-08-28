@@ -58,6 +58,11 @@ import {
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
+import {
+  EntityTechInsightsScorecardContent,
+  EntityTechInsightsScorecardCard,
+} from '@backstage-community/plugin-tech-insights';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -137,6 +142,14 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+    <Grid item md={8} xs={12}>
+      <EntityTechInsightsScorecardCard
+        title="Customized title for the scorecard"
+        description="Small description about scorecards"
+        checksId={['groupOwnerCheck']}
+      />
+    </Grid>
   </Grid>
 );
 
@@ -174,6 +187,14 @@ const serviceEntityPage = (
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/tech-insights" title="Scorecards">
+      <EntityTechInsightsScorecardContent
+        title="Customized title for the scorecard"
+        description="Small description about scorecards"
+        checksId={['groupOwnerCheck']}
+      />
     </EntityLayout.Route>
   </EntityLayout>
 );
