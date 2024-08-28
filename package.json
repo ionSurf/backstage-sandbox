@@ -28,7 +28,8 @@
     "packages": [
       "packages/*",
       "plugins/*",
-      "../backstage-timesaver-plugin/plugins/*"
+      "../backstage-timesaver-plugin/plugins/*",
+      "../community-plugins/workspaces/tech-insights/plugins/*"
     ]
   },
   "devDependencies": {
@@ -64,8 +65,5 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.8.3",
-  "dependencies": {
-    "@tduniec/backstage-plugin-time-saver": "workspace:^"
-  }
+  "packageManager": "yarn@3.8.3"
 }
