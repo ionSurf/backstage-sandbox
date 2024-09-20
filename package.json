@@ -28,7 +28,7 @@
     "packages": [
       "packages/*",
       "plugins/*",
-      "../backstage-timesaver-plugin/plugins/*",
+      "../../alithya/backstage-plugins/workspaces/time-saver/plugins/",
       "../community-plugins/workspaces/tech-insights/plugins/*"
     ]
   },
@@ -50,10 +50,10 @@
     "@types/react": "18.0.0",
     "@types/react-dom": "^18",
     "@testing-library/react": "^15.0.0",
-    "@tduniec/backstage-plugin-time-saver": "1.3.0",
-    "@tduniec/backstage-plugin-time-saver-backend": "2.4.0",
-    "@tduniec/backstage-plugin-time-saver-common": "0.4.0",
-    "@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor": "1.1.0"
+    "@alithya-oss/plugin-time-saver": "1.3.0",
+    "@alithya-oss/plugin-time-saver-backend": "2.4.0",
+    "@alithya-oss/plugin-time-saver-common": "0.4.0",
+    "@alithya-oss/plugin-catalog-backend-module-time-saver-processor": "1.1.0"
   },
   "prettier": "@spotify/prettier-config",
   "lint-staged": {
