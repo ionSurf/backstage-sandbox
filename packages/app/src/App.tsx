@@ -50,7 +50,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
-import { TimeSaverPage } from '@tduniec/backstage-plugin-time-saver';
+import { TimeSaverPage } from '@alithya-oss/plugin-time-saver';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { homePage } from './components/home/HomePage';
 import { catalogMessages, catalogReactMessages } from './translations';
