@@ -39,10 +39,10 @@ backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
 backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 
 // time saver plugin
-backend.add(import('@tduniec/backstage-plugin-time-saver-backend'));
+backend.add(import('@alithya-oss/plugin-time-saver-backend'));
 backend.add(
   import(
-    '@tduniec/backstage-plugin-catalog-backend-module-time-saver-processor'
+    '@alithya-oss/plugin-catalog-backend-module-time-saver-processor'
   ),
 );
 

@@ -14,6 +14,7 @@
     "lint": "backstage-cli package lint"
   },
   "dependencies": {
+    "@alithya-oss/plugin-time-saver": "workspace:^",
     "@backstage-community/plugin-github-actions": "^0.6.16",
     "@backstage-community/plugin-tech-insights": "workspace:^",
     "@backstage-community/plugin-tech-radar": "^0.7.5",
@@ -43,7 +44,6 @@
     "@backstage/theme": "^0.5.6",
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.9.1",
-    "@tduniec/backstage-plugin-time-saver": "workspace:^",
     "history": "^5.0.0",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
