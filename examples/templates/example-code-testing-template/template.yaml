@@ -35,37 +35,31 @@ spec:
       action: debug:log
       input:
         message: Kebab case '${{ parameters.name }}'
-        extra: ${{ parameters.name | lower | replace(" ", "-") }}
     - id: write-snake-case
       name: Rendu snake_case
       action: debug:log
       input:
         message: Snake case '${{ parameters.name }}'
-        extra: ${{ parameters.name | lower | replace(" ", "_") }}
     - id: write-upper-camel-case
       name: Rendu UpperCamelCase
       action: debug:log
       input:
         message: Upper camel case for '${{ parameters.name }}'
-        extra: ${{ parameters.name | title | replace (" ", "") }}
     - id: write-lower-compact-case
       name: Rendu lowercompactcase
       action: debug:log
       input:
         message: Lower compact case for '${{ parameters.name }}'
-        extra: ${{ parameters.name | lower | replace (" ", "") }}
     - id: write-upper-compact-case
       name: Rendu Uppercompactcase
       action: debug:log
       input:
         message: Upper compact case for '${{ parameters.name }}'
-        extra: ${{ parameters.name | capitalize | replace (" ", "") }}
     - id: write-bash-variable-case
       name: Rendu BASH_VARIABLE_CASE
       action: debug:log
       input:
         message: Bash variable case for '${{ parameters.name }}'
-        extra: ${{ parameters.name | upper | replace (" ", "_") }}
   output:
     text:
       - title: Résultat du formattage du texte
