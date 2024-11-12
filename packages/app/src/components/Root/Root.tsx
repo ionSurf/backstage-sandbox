@@ -84,6 +84,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         to="/settings"
       >
         <SidebarItem icon={Timelapse} to="time-saver" text="timeSaver" />
+        <SidebarItem icon={Timelapse} to="time-saver-samples" text="timeSaverSamples" />
         <SidebarSettings />
       </SidebarGroup>
     </Sidebar>
