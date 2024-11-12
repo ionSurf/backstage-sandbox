@@ -41,16 +41,14 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 // time saver plugin
 backend.add(import('@alithya-oss/plugin-time-saver-backend'));
 backend.add(
-  import(
-    '@alithya-oss/plugin-catalog-backend-module-time-saver-processor'
-  ),
+  import('@alithya-oss/plugin-catalog-backend-module-time-saver-processor'),
 );
 
 // tech-insights
-backend.add(import('@backstage-community/plugin-tech-insights-backend'));
-// backend.add(legacyPlugin('tech-insights', import('./plugins/techInsights')));
-backend.add(
-  import('@backstage-community/plugin-tech-insights-backend-module-jsonfc'),
-);
+// backend.add(import('@backstage-community/plugin-tech-insights-backend'));
+// // backend.add(legacyPlugin('tech-insights', import('./plugins/techInsights')));
+// backend.add(
+//   import('@backstage-community/plugin-tech-insights-backend-module-jsonfc'),
+// );
 
 backend.start();
