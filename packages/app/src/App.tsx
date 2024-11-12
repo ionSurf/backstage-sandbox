@@ -50,7 +50,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
-import { TimeSaverPage } from '@alithya-oss/plugin-time-saver';
+import { TimeSaverPage, TimeSaverSamplesPage } from '@alithya-oss/plugin-time-saver';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { homePage } from './components/home/HomePage';
 import { catalogMessages, catalogReactMessages } from './translations';
@@ -184,6 +184,7 @@ const routes = (
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
     <Route path="/time-saver" element={<TimeSaverPage />} />
+    <Route path="/time-saver-samples" element={<TimeSaverSamplesPage />} />
   </FlatRoutes>
 );
 
