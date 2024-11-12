@@ -16,7 +16,6 @@
   "dependencies": {
     "@alithya-oss/plugin-time-saver": "workspace:^",
     "@backstage-community/plugin-github-actions": "^0.6.16",
-    "@backstage-community/plugin-tech-insights": "workspace:^",
     "@backstage-community/plugin-tech-radar": "^0.7.5",
     "@backstage/app-defaults": "^1.5.11",
     "@backstage/catalog-model": "^1.7.0",

@@ -19,8 +19,6 @@
     "@alithya-oss/plugin-catalog-backend-module-time-saver-processor": "workspace:^",
     "@alithya-oss/plugin-time-saver-backend": "workspace:^",
     "@alithya-oss/plugin-time-saver-common": "workspace:^",
-    "@backstage-community/plugin-tech-insights-backend": "workspace:^",
-    "@backstage-community/plugin-tech-insights-backend-module-jsonfc": "workspace:^",
     "@backstage/backend-common": "^0.25.0",
     "@backstage/backend-defaults": "^0.5.0",
     "@backstage/backend-tasks": "^0.6.1",
