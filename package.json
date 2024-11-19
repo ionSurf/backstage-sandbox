@@ -54,9 +54,21 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.8.5",
+  "packageManager": "yarn@4.5.1",
   "dependencies": {
     "@changesets/cli": "^2.27.8"
   },
+  "resolutions": {
+    "@backstage/cli": "0.28.2",
+    "@backstage/core-app-api": "1.15.1",
+    "@backstage/core-components": "0.15.1",
+    "@backstage/core-plugin-api": "1.10.0",
+    "@backstage/test-utils": "1.7.0",
+    "@backstage/theme": "0.6.0",
+    "chart.js": "4.4.6",
+    "@mui/x-data-grid": "7.22.2",
+    "@backstage/backend-defaults": "0.5.2",
+    "@backstage/plugin-auth-backend-module-guest-provider": "0.2.1",
+    "@backstage/plugin-auth-backend": "0.23.1"
   }
 }
